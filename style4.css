@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #6c63ff;
+}
+
+button#addTaskBtn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: #6c63ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button#addTaskBtn:hover {
+  background-color: #574fd6;
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f7f7f7;
+  padding: 12px 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  background-color: #e6e6ff;
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+li div button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+li div button:hover {
+  transform: scale(1.2);
+}
+
+li div button.complete {
+  color: #28a745;
+}
+
+li div button.edit {
+  color: #ffc107;
+}
+
+li div button.delete {
+  color: #dc3545;
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button#addTaskBtn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
